@@ -1,10 +1,9 @@
-class Subject:
-    def __init__(self, name, age, gender, gold):
+from human import Human
 
-        self.name = name
-        self.age = age
-        self.gender = gender
-        self.gold = gold
+class Subject(Human):
+    def __init__(self, age, name, gold, is_hungry):
+        super().__init__(self, age, name, gold, is_hungry)
+
         self.king = []
     
 
@@ -18,4 +17,4 @@ class Subject:
     @occupation.setter
     def occupation(self, new_occupation):
         
-        self._occupstion = new_occupation
+        self._occupation = new_occupation

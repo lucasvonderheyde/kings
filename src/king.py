@@ -1,9 +1,9 @@
-class King:
-    def __init__(self, name, age, gold, location, subject):
+from human import Human
 
-        self.name = name
-        self.age = age 
-        self.golf = gold
+class King(Human):
+    def __init__(self, age, name, gold, location, subject, is_hungry):
+        super().__init__(self, age, name, gold, is_hungry)
+
         location.king.append(self)
         subject.king.append(self)
         

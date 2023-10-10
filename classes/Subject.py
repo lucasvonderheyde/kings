@@ -1,9 +1,9 @@
-from human import Human
+from Human import Human
 
 class Subject(Human):
-    def __init__(self, age, name, gold, is_hungry):
-        super().__init__(self, age, name, gold, is_hungry)
-
+    def __init__(self, age, name, gold, is_hungry=False):
+        super().__init__(age, name, gold)
+        self.is_hungry = is_hungry
         self.king = []
     
 

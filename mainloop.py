@@ -1,11 +1,12 @@
-import sys
 from prompt_toolkit.shortcuts import yes_no_dialog
+from prompt_toolkit.shortcuts import input_dialog
 
-from modules.get_name_age_difficulty import get_name_age_difficulty
-from castle import Castle
-from classes.king import King
-
-sys.path.insert(0, "kings/src/classes")
+from modules.get_player_game_info import get_name
+from modules.get_player_game_info import get_age
+from modules.get_player_game_info import get_difficulty
+from classes.Castle import Castle
+from classes.King import King
+from classes.Human import Human
 
 if __name__ == "__main__":
 
@@ -13,35 +14,29 @@ if __name__ == "__main__":
     easy_castle_2 = Castle("Forest", 350)
     medium_castle = Castle("Rocky", 500)
     hard_castle = Castle("WINTER DEATH", 700)
-
     
-
     first_question_response = yes_no_dialog(
         title= "|_-^KING^-_|",
-        text="So you want to be King?".run()
-    )
+        text="So you want to be King?").run()
     
     print(first_question_response)
 
-    breakpoint
+    if first_question_response == True:
+        yes_prompt = "What is your name?"
 
-    # input("So you want to be king?\n")
-    
-    if first_question_response.lower() == "yes" or first_question_response.lower() == "y":
-        print("Great!")
-    
+        player_name = get_name(yes_prompt)
+
     else:
-        print("welp to bad someones got to play this 'game'.")
+        no_prompt = "Just put your name in."
 
-    name, age, difficulty = get_name_age_difficulty() 
+        player_name = get_name(no_prompt)
 
-    # def select_difficulty(difficulty):
 
-    #     if difficulty.lower() == "easy":
-            
-    #     elif difficulty.lower() == "medium":
+    player_age = get_age(player_name)
 
-    #     elif difficulty.lower() == "hard":
+
+    player_difficulty = get_difficulty(player_name)
+    
 
     print("Alright enough from me... go be King ya donk")
 

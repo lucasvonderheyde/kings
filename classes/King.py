@@ -1,4 +1,4 @@
-from Human import Human
+from .Human import Human
 
 class King(Human):
     def __init__(self, age, name, gold, difficulty, location, subject):

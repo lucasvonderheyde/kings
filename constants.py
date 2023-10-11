@@ -1,0 +1,22 @@
+TRY_AGAIN = [
+    "Nice try, buddy! Try again.",
+    "Oops! Swing and a miss. Try again.",
+    "You almost had it! Give it another shot.",
+    "That's not quite it. Another go?",
+    "Almost there! Try again, you've got this.",
+    "Not even close, but don't give up!",
+    "You call that an attempt? Go on, try again.",
+    "HAHAHAHA",
+    "A for effort, F for execution. Try again!",
+    "Is that all you've got? Try again!",
+    "Missed it by *that* much! Try again.",
+    "Yikes! That was embarrassing. Try again.",
+    "You're getting warmer! Try again.",
+    "Wrong answer, but you're not a quitter, right?",
+    "Failure is the first step to success. Try again.",
+    "Close but no cigar! Try again.",
+    "You think you're wrong? You're absolutely correct! Try again.",
+    "So close, yet so far! Try again.",
+    "Wow, that was impressively incorrect. Try again.",
+    "Nope, nope, nope! But don't stop trying."
+]

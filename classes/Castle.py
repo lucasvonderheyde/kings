@@ -12,7 +12,7 @@ class Castle:
     def castle_name(self):
         return self._castle_name
     
-    @name.setter
+    @castle_name.setter
     def castle_name(self, new_castle_name):
         
         self._castle_name = new_castle_name

@@ -1,4 +1,4 @@
-from Human import Human
+from .Human import Human
 
 class Subject(Human):
     def __init__(self, age, name, gold, is_hungry=False):

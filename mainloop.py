@@ -24,23 +24,25 @@ if __name__ == "__main__":
 
     if first_question_response == True:
         yes_prompt = "What is your name?"
-
         player_name = get_name(yes_prompt)
 
     else:
         no_prompt = "Just put your name in."
-
         player_name = get_name(no_prompt)
 
 
     player_age = get_age(player_name)
-
-
     player_difficulty = get_difficulty(player_name)
     
     breakpoint()
 
-    King
+    if player_difficulty == 0:
+        castle = easy_castle or easy_castle_2 
+    elif player_difficulty == 1:
+        castle = medium_castle
+    elif player_difficulty == 2:
+        castle = hard_castle
+
 
     print("Alright enough from me... go be King ya donk")
 

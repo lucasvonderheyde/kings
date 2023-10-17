@@ -1,14 +1,12 @@
 from .Human import Human
 
 class Subject(Human):
-    def __init__(self, age, name, gold, is_hungry=False):
+    def __init__(self, age, name, gold, castle, king, is_hungry=False):
         super().__init__(age, name, gold)
         self.is_hungry = is_hungry
-        self.king = []
-    
-
-    def pay_taxes(self, gold):
-        pass
+        castle.subject.append(self)
+        king.subject.append(self)
+       
 
     @property
     def occupation(self):
@@ -18,3 +16,7 @@ class Subject(Human):
     def occupation(self, new_occupation):
         
         self._occupation = new_occupation
+
+
+    def pay_taxes(self, gold):
+        pass

@@ -1,9 +1,13 @@
 class Castle:
-    def __init__(self, biome, upkeep):
+    castles = []
+    def __init__(self, biome, difficulty, upkeep):
 
+        self.difficulty = difficulty
         self.upkeep = upkeep
         self.biome = biome
         self.subjects = []
+
+
 
     @property
     def castle_name(self):

@@ -1,6 +1,9 @@
 from .Human import Human
 
 class Subject(Human):
+
+    subjects = []
+    
     def __init__(self, age, name, gold, castle, king, is_hungry=False):
         super().__init__(age, name, gold)
         self.is_hungry = is_hungry
@@ -8,6 +11,7 @@ class Subject(Human):
         self.king = king
         castle.subjects.append(self)
         king.subjects.append(self)
+        Subject.subjects.append(self)
        
     def __repr__(self):
         return f"{self.name}, {self.age}"

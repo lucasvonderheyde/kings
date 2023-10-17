@@ -6,6 +6,7 @@ class Castle:
         self.upkeep = upkeep
         self.biome = biome
         self.subjects = []
+        Castle.castles.append(self)
 
 
 

@@ -1,4 +1,5 @@
 from prompt_toolkit.shortcuts import yes_no_dialog
+from prompt_toolkit.shortcuts import message_dialog
 from prompt_toolkit.shortcuts import input_dialog
 from prompt_toolkit.shortcuts import button_dialog
 import pdb
@@ -37,6 +38,7 @@ def main():
     castle_2 = Castle("Forest", 1, 350)
     castle_3 = Castle("Rocky", 2, 500)
     castle_4 = Castle("WINTER DEATH", 3, 700)
+    all_castles = Castle.castles
 
     print("Alright enough from me... go be King ya donk")
 
@@ -46,7 +48,8 @@ def main():
     Subject(28, "Lucas", 4, castle_1, player)
     Subject(27, "Nav", 5, castle_1, player)
     Subject(24, "Hanan", 3, castle_1, player)
-    # Subject(78, "manban", 6, castle_2, player)
+    Subject(78, "manban", 6, castle_2, player)
+
 
     day_counter = 1
     #game
@@ -60,12 +63,6 @@ def main():
         ).run()
 
         king_castle_pick = button_dialog(
-            title= "|_-^KING^-_|",
-            text= "Which Castle would you like to go to?",
-            buttons= which_castle_go_to(player)
-        ).run()
-
-        button_dialog(
             title= "|_-^KING^-_|",
             text= "Which Castle would you like to go to?",
             buttons= which_castle_go_to(player)
@@ -89,15 +86,13 @@ def which_castle_go_to(player):
 
     return buttons
 
-def selected_castle_info():
-
-    button_dialog(
-            title= "|_-^KING^-_|",
-            text= "Which Castle would you like to go to?",
-            buttons= [
-
-            ]
-        ).run()
+def selected_castle_info(all_castles, player_difficulty):
+    for castle in all_castles:
+        if castle.difficutly == player_difficulty:
+            castle_info = message_dialog(
+                title= f"{castle.biome}",
+                text= f"{castle.subjects}").run()
+            return castle_info
 
 
 if __name__ == "__main__":

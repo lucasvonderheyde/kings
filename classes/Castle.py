@@ -1,5 +1,5 @@
 class Castle:
-    def __init__(self, biome, upkeep, king):
+    def __init__(self, biome, upkeep):
 
         self.upkeep = upkeep
         self.biome = biome

@@ -4,8 +4,8 @@ class Subject(Human):
     def __init__(self, age, name, gold, castle, king, is_hungry=False):
         super().__init__(age, name, gold)
         self.is_hungry = is_hungry
-        castle.subject.append(self)
-        king.subject.append(self)
+        castle.subjects.append(self)
+        king.subjects.append(self)
        
 
     @property

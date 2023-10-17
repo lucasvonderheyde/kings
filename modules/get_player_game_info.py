@@ -44,3 +44,5 @@ def get_difficulty(name):
             ('Death', 2)
         ],
     ).run()
+
+    return difficulty
